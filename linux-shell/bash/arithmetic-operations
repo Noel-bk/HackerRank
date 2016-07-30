@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# see http://stackoverflow.com/questions/26465496/rounding-up-float-point-numbers-bash
+read input
+printf "%.3f\n" $(echo "$input" | bc -l)
