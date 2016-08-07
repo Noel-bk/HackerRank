@@ -1,0 +1,11 @@
+#!/bin/bash
+
+awk '{
+avg = ($2+$3+$4) / 3
+if ( avg <= 50)
+	print $0, ":", "FAIL";
+else if ( avg >= 60 && avg <= 80)
+	print $0,":","B";
+else if ( avg >= 80 && avg <= 90)
+	print $0,":","A";
+}'
